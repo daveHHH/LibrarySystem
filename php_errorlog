@@ -1,0 +1,68 @@
+[09-Oct-2024 10:20:48 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:23:29 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:23:57 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:24:25 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:25:54 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:26:12 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:27:41 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:30:10 CST6CDT] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/bookbusters.org/public_html/login.php:9
+Stack trace:
+#0 /home/customer/www/bookbusters.org/public_html/login.php(9): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'librarydb')
+#1 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 9
+[09-Oct-2024 10:32:44 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/bookbusters.org/public_html/login.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 12
+[09-Oct-2024 10:36:16 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/bookbusters.org/public_html/login.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/login.php on line 12
+[09-Oct-2024 10:36:59 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/bookbusters.org/public_html/register.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/register.php on line 16
+[09-Oct-2024 10:38:36 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/bookbusters.org/public_html/register.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/register.php on line 16
+[09-Oct-2024 11:09:02 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/bookbusters.org/public_html/register.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/register.php on line 16
+[09-Oct-2024 11:09:31 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/bookbusters.org/public_html/register.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/register.php on line 16
+[10-Oct-2024 02:27:03 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/customer/www/bookbusters.org/public_html/register.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/bookbusters.org/public_html/register.php on line 45
