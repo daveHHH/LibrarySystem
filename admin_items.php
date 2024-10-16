@@ -17,6 +17,15 @@ if (isset($_POST['delete'])) {
 // Fetch all items
 $result = $conn->query("SELECT * FROM items");
 
+// Fetch column names
+$columnsResult = $conn->query("SHOW COLUMNS FROM items");
+$columns = [];
+while ($column = $columnsResult->fetch_assoc()) {
+    // Exclude 'id' and 'created_at' fields
+    if ($column['Field'] !== 'id' && $column['Field'] !== 'created_at') {
+        $columns[] = $column['Field'];
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,64 +38,31 @@ $result = $conn->query("SELECT * FROM items");
 </head>
 <body>
 
-
 <!-- Title Section -->
 <div class="container text-center my-4">
     <h1>Manage Items</h1>
 </div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Library System</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a href="index.php" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Search</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link active">Items</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Users</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Transactions</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav"> <!-- Aligns right -->
-            <li class="nav-item">
-                <a href="#" class="nav-link text-red">My Account</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php include('layouts/navbar.php'); ?>
 
 <div class="container mt-4">
     <!-- Add new item button -->
-    <a href="admin_add_new_item.php" class="btn btn-primary">Add New Item</a>
+    <a href="admin_add_new_item.php" class="btn btn-primary mb-4">Add New Item</a>
     <table class="table">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Type</th>
-                <th>Quantity</th>
-                <th>Visible</th>
+                <?php foreach ($columns as $column): ?>
+                    <th><?php echo htmlspecialchars(ucfirst($column)); ?></th>
+                <?php endforeach; ?>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <?php while ($item = $result->fetch_assoc()): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($item['title']); ?></td>
-                    <td><?php echo htmlspecialchars($item['type']); ?></td>
-                    <td><?php echo htmlspecialchars($item['quantity']); ?></td>
-                    <td><?php echo $item['is_visible'] ? 'Yes' : 'No'; ?></td>
+                    <?php foreach ($columns as $column): ?>
+                        <td><?php echo htmlspecialchars($item[$column]); ?></td>
+                    <?php endforeach; ?>
                     <td>
                         <!-- Edit button -->
                         <a href="admin_edit_item.php?id=<?php echo $item['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
@@ -103,7 +79,11 @@ $result = $conn->query("SELECT * FROM items");
     </table>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
 
 <?php

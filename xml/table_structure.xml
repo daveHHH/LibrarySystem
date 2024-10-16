@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+    <field><name>title</name><type>string</type></field>
+    
+<field><name>age</name><type>integer</type></field><field><name>type</name><type>enum</type><enumValues>book, video, audio</enumValues></field></fields>
